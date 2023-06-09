@@ -1,6 +1,6 @@
 import { View, Text, Pressable, StyleSheet } from "react-native";
-import { GlobalStyles } from "../constants/styles";
-import { getFormattedDate } from "../utils/dateHandler";
+import { getFormattedDate } from "../../utils/dateHandler";
+import { GlobalStyles } from "../../constants/styles";
 
 const ExpenseItem = ({ description, amount, date }) => {
   return (
