@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const baseInstance = axios.create({
-  baseURL: "backend",
+  baseURL: "https://myexamrn-default-rtdb.firebaseio.com",
 });
 
 export const storeExpense = async (expenseData) => {
