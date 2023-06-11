@@ -1,6 +1,8 @@
-### Expo Prac Charge track App
+## React Native Expo Prac
 
 <br>
+
+## basic prac - expense app
 
 ### Dep
 
@@ -20,3 +22,15 @@ npm install @react-navigation/bottom-tabs
 - [x] context api 활용 global state crud
 - [x] 사용자 입력 처리
 - [x] http 요청 처리
+
+<br>
+
+## authentication prac
+
+### Dep
+
+
+<br>
+
+### Prac
+
