@@ -4,5 +4,6 @@ export const GlobalStyles = {
     primary2: "#E8C4C4",
     darkGray: "#6D7D8B",
     lightGray: "#BBC8D4",
+    sub1: "#2B3A55",
   },
 };
