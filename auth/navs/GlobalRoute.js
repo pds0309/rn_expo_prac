@@ -1,10 +1,11 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import BottomNavigation from "./BottomNavigation";
+import { useSelector } from "react-redux";
 
 const Stack = createNativeStackNavigator();
 
 const GlobalRoute = () => {
-  const hasAuth = false;
+  const { isAuthenticated } = useSelector((state) => state.user);
   return (
     <Stack.Navigator
       screenOptions={{
@@ -12,7 +13,7 @@ const GlobalRoute = () => {
       }}
     >
       <Stack.Screen name="BottomNavigation">
-        {() => <BottomNavigation hasAuth={hasAuth} />}
+        {() => <BottomNavigation hasAuth={isAuthenticated} />}
       </Stack.Screen>
     </Stack.Navigator>
   );

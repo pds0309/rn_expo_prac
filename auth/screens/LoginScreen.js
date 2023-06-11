@@ -6,11 +6,14 @@ import { layoutStyles } from "../stylesheets/layoutStyles";
 import { useNavigation } from "@react-navigation/native";
 import { useState } from "react";
 import { login } from "../apis/authApi";
+import { useDispatch } from "react-redux";
+import { __getUser } from "../store/userSlice";
 
 const LoginScreen = () => {
   const navigation = useNavigation();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const dispatch = useDispatch();
   const handleSignupButtonPress = () => {
     navigation.reset({
       index: 0,
@@ -32,7 +35,7 @@ const LoginScreen = () => {
       return;
     }
     try {
-      await login({ email, password });
+      dispatch(__getUser({ email, password }));
     } catch {
       Alert.alert("Login Failed!");
     }
