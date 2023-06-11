@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
   infoText: {
     color: "white",
     fontSize: 16,
-    textAlign: "cneter",
+    textAlign: "center",
     marginTop: 32,
   },
 });
