@@ -11,6 +11,8 @@ npm install @react-navigation/native
 expo install react-native-screens react-native-safe-area-context
 npm install @react-navigation/native-stack
 npm install @react-navigation/bottom-tabs
+npm install axios
+firebase
 ```
 
 <br>
@@ -29,8 +31,28 @@ npm install @react-navigation/bottom-tabs
 
 ### Dep
 
+```
+npm install @react-navigation/native
+expo install react-native-screens react-native-safe-area-context
+npm install @react-navigation/native-stack
+npm install @react-navigation/bottom-tabs
+npm install axios
+npm install react-redux @reduxjs/toolkit
+firebase
+```
+
 
 <br>
 
 ### Prac
 
+- [X] 비로그인 시 로그인 화면이 최초에 식별된다.
+- [X] 비로그인 시 로그인/회원가입 navigation이 식별된다.
+- [X] 비로그인 시 로그인/회원가입을 할 수 있다.
+- [X] 로그인 시/로그인 된 사용자에게 최초에 welcom 화면이 식별된다.
+- [X] 로그인 시 mypage, welcome이 식별된다.
+
+
+<br>
+
+ 
