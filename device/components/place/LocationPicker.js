@@ -1,4 +1,4 @@
-import { Alert, StyleSheet, View } from "react-native";
+import { Alert, Image, StyleSheet, Text, View } from "react-native";
 import OutlinedButton from "../UI/OutlinedButton";
 import { Colors } from "../../constants/colors";
 import {
@@ -6,8 +6,13 @@ import {
   useForegroundPermissions,
   PermissionStatus,
 } from "expo-location";
+import { useState } from "react";
+import { getPreviewLocation } from "../../utils/location";
+import { useNavigation } from "@react-navigation/native";
 
 const LocationPicker = () => {
+  const navigation = useNavigation();
+  const [pickedLocation, setPickedLocation] = useState();
   const [locationPermissionInfo, requestPermission] =
     useForegroundPermissions();
 
@@ -19,7 +24,7 @@ const LocationPicker = () => {
     if (locationPermissionInfo.status === PermissionStatus.DENIED) {
       Alert.alert(
         "Insufficient Permissions!",
-        "카메라 허용해야 사용할 수 있어요",
+        "위치 허용해야 사용할 수 있어요",
         [
           {
             text: "취소",
@@ -42,12 +47,26 @@ const LocationPicker = () => {
     }
     // TODO: Check Options!!
     const location = await getCurrentPositionAsync();
-    console.log(location);
+    setPickedLocation({
+      lat: location.coords.latitude,
+      lng: location.coords.longitude,
+    });
   };
-  const handlePickOnMapPress = () => {};
+  const handlePickOnMapPress = () => {
+    navigation.navigate("Map");
+  };
   return (
     <View>
-      <View style={styles.mapPreview}></View>
+      <View style={styles.mapPreview}>
+        {!pickedLocation ? (
+          <Text style={styles.emptyLocationText}>No Location</Text>
+        ) : (
+          <Image
+            style={styles.previewLocationImage}
+            source={{ uri: getPreviewLocation(pickedLocation) }}
+          />
+        )}
+      </View>
       <View style={styles.actions}>
         <OutlinedButton icon="location" onPress={handleGetLoactionPress}>
           Locate User
@@ -71,10 +90,18 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: Colors.primary100,
     borderRadius: 4,
+    overflow: "hidden",
   },
   actions: {
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
+  },
+  emptyLocationText: {
+    color: "white",
+  },
+  previewLocationImage: {
+    width: "100%",
+    height: "100%",
   },
 });
