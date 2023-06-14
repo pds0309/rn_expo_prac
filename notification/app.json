@@ -32,6 +32,12 @@
           "color": "#ffffff"
         }
       ]
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "YOUR_PROJECT_ID(for push notification)"
+      }
+    },
+    "owner": "OWNER"
   }
 }
