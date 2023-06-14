@@ -83,4 +83,22 @@ npm install react-native-maps
 - useRoute
 - useIsFocused
 
+<br>
+
+## Notification
+
+### Dep
+
+```
+npx expo install expo-notifications
+```
+
+<br>
+
+### Prac
+
+- [X] local notification
+- [X] push notification
+
+
  
