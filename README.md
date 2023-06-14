@@ -100,5 +100,20 @@ npx expo install expo-notifications
 - [X] local notification
 - [X] push notification
 
+<br>
+
+
+## Expo Publishing
+
+### Configuring Procedure
+
+- Permission: Control permissions requested 
+
+- AppName & Idedentifier: visible App Name, version, App Identifier
+
+- Env variables: store variables securely in app-wide
+
+- Icons & Splash Screen 
+
 
  
