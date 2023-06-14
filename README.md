@@ -105,6 +105,19 @@ npx expo install expo-notifications
 
 ## Expo Publishing
 
+### Dep
+
+```
+//env
+npx expo install dotenv
+//build
+npm install -g eas-cli
+eas login
+eas build:configure
+eas build -p android --profile [profile]
+```
+
+
 ### Configuring Procedure
 
 - Permission: Control permissions requested 
