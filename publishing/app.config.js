@@ -24,6 +24,7 @@ export default {
         foregroundImage: "./assets/adaptive-icon.png",
         backgroundColor: "#ffffff",
       },
+      package: "com.pds.sample",
     },
     web: {
       favicon: "./assets/favicon.png",
