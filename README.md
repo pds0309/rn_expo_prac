@@ -55,4 +55,32 @@ firebase
 
 <br>
 
+
+## Native Device Prac
+
+### Dep
+
+```
+npm install @react-navigation/native @react-navigation/native-stack
+expo install expo-image-picker
+expo install expo-location
+npm install react-native-maps
+```
+
+<br>
+
+
+### Prac
+
+- [X] Camera(ExpoImagePicker)
+- [X] Location(ExpoLocation) & Map(react-native-maps)
+
+<br>
+
+### Etc
+
+- useNavigation
+- useRoute
+- useIsFocused
+
  
